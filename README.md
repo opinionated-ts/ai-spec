@@ -1,6 +1,4 @@
-# @opinionated-ts/ai-spec
-
-## What is this repository?
+# What is this repository?
 
 AI coding assistants and tool platforms (agents, hooks, MCP servers, plugins, skills) each define their own conventions, formats, and capabilities. This fragmentation makes it hard to build tools that work consistently across providers.
 
