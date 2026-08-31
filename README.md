@@ -37,4 +37,4 @@ This spec is meant to be built by the community. Contributions, proposals, and c
 
 ## License
 
-[MIT license](LICENSE)
+[CC BY 4.0](LICENSE)
