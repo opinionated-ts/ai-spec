@@ -32,4 +32,4 @@ You don't need a proposal of your own to contribute meaningfully:
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the project's [MIT license](LICENSE).
+[CC BY 4.0](LICENSE)
