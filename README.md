@@ -23,5 +23,3 @@ We propose adopting an approach that incorporates the best features of each prov
 - [Hooks](ai-spec/hooks/hooks.md)
 - [MCP](ai-spec/mcp/mcp.md)
 - [Setting files](ai-spec/setting_files/setting_files.md)
-
-Each of these topics will be addressed in a separate document under the `doc/` directory.
