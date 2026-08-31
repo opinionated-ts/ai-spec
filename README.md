@@ -1,40 +1,27 @@
-# What is this repository?
+# AI Spec Proposal
 
-AI coding assistants and tool platforms (agents, hooks, MCP servers, plugins, skills) each define their own conventions, formats, and capabilities. This fragmentation makes it hard to build tools that work consistently across providers.
+## Disclaimer
 
-`ai-spec` is an attempt to define an open, opinionated specification for AI-assisted development — a common configuration that AI providers and environments can align to.
+This proposal explores and synthesizes best practices from various AI providers, always respecting their licenses and copyrights. This is an independent, community-driven initiative and does not intend to infringe on any provider's rights. If you are a provider and believe this proposal affects your rights, please reach out so we can make the necessary corrections.
+
+## Proposal
+
+We propose adopting an approach that incorporates the best features of each provider's ecosystem, combining them into a single, coherent specification — as long as their licenses and copyrights allow it.
 
 ## Goals
 
-- Provide a clear, community-driven specification covering how agents, hooks, MCP integrations, plugins, and skills should be defined and behave.
-- Reduce inconsistencies between AI coding assistants and tooling platforms.
-- Aim to become an open standard: if adopted, tools built against this spec would work across any compliant provider, instead of being tied to a single vendor.
+- Define a common, open, and "opinionated" specification for AI-assisted development.
+- Allow the resulting ecosystem to work with any provider or environment that conforms to the spec, rather than being tied to a single platform.
+- Build the specification collaboratively, as an open-source standard.
 
-## Non-goals
+## Recommended work areas
 
-- This project does not aim to build a unified abstraction layer or wrapper across all existing platforms.
+- [System Prompt](doc/system_prompt.md)
+- [Agents](doc/agents.md)
+- [Skills](doc/skills.md)
+- [Commands](doc/commands.md)
+- [Hooks](doc/hooks.md)
+- [MCP](doc/mcp.md)
+- [Setting files](doc/setting_files.md)
 
-## Current status
-
-This specification is under active discussion and is **not yet stable**. Expect breaking changes to proposals as the community refines scope and details.
-
-See [discussions](https://github.com/opinionated-ts/ai-spec/discussions) for ongoing conversations and open questions.
-
-## Scope
-
-The specification aims to cover:
-
-- **Agents**: how autonomous AI agents are defined, invoked, and scoped
-- **Hooks**: integration points between AI and development workflows
-- **MCP**: conventions on top of the Model Context Protocol
-- **Plugins**: how IDE/tool extensions should expose capabilities to AI
-- **Skills**: a common format for reusable AI agent capabilities
-- **Environment**: recommended baseline configuration for AI-enhanced development
-
-## Contributing
-
-This spec is meant to be built by the community. Contributions, proposals, and critiques are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose changes or open a discussion.
-
-## License
-
-[CC BY 4.0](LICENSE)
+Each of these topics will be addressed in a separate document under the `doc/` directory.
