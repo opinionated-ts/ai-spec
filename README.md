@@ -16,12 +16,12 @@ We propose adopting an approach that incorporates the best features of each prov
 
 ## Recommended work areas
 
-- [System Prompt](system_prompt/system_prompt.md)
-- [Agents](agents/agents.md)
-- [Skills](skills/skills.md)
-- [Commands](commands/commands.md)
-- [Hooks](hooks/hooks.md)
-- [MCP](mcp/mcp.md)
-- [Setting files](setting_files/setting_files.md)
+- [System Prompt](ai-spec/system_prompt/system_prompt.md)
+- [Agents](ai-spec/agents/agents.md)
+- [Skills](ai-spec/skills/skills.md)
+- [Commands](ai-spec/commands/commands.md)
+- [Hooks](ai-spec/hooks/hooks.md)
+- [MCP](ai-spec/mcp/mcp.md)
+- [Setting files](ai-spec/setting_files/setting_files.md)
 
 Each of these topics will be addressed in a separate document under the `doc/` directory.
