@@ -6,13 +6,11 @@ Thanks for your interest in contributing! This project is community-driven, and 
 
 1. **Open a discussion** in [discussion#1](https://github.com/opinionated-ts/ai-spec/discussions/1) to share your idea and get early feedback. This helps the community understand the problem and context before seeing the code.
 
-2. **Fork the repository** (if you haven't already) and **create a branch** named `proposal/<your-username-or-org>` (replace `<your-username-or-org>` with your GitHub username or organization) in your fork.
 
-3. **Open a PR** from that branch with the specification (or section of it) you want to propose. Be explicit about:
-    - What problem it solves or what inconsistency it addresses
-    - The exact structure/format you're proposing (Markdown, JSON Schema, TypeScript types, etc.)
-    - Examples showing how it would be used in practice
-    - Any trade-offs or alternatives you considered
+
+2. **Checkout the [`proposal/template`](https://github.com/opinionated-ts/ai-spec/tree/proposal/template) branch** which contains the base structure for proposals.
+
+3. **Open a PR** from your work with the specification (or section of it) you want to propose. See [proposal.instructions.md](./proposal.instructions.md) for detailed instructions on how to conduct your proposal.
 
 4. **Link your PR in the discussion.** Comment on the discussion you opened in step 1 with a link to the PR, so the community can find it and discuss it alongside the rest.
 
