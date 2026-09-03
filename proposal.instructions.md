@@ -1,121 +1,159 @@
-# Proposal Creation Skill for AI Agents
+# Proposal Instructions
 
-This skill provides step-by-step instructions for AI agents to create proposals in the opinionated-ts repository following the standardized workflow.
+These instructions define the local workflow for creating and submitting proposals to the `ai-spec` repository.
 
-### 1. Start from the Template Branch
+## 1. Start from the Template Branch
 
-Always begin work from the `proposal/template` branch:
+Start from the `proposal/template` branch:
 
 ```bash
-# Checkout the template branch
 git checkout proposal/template
-
-# Ensure you have the latest version
 git pull origin proposal/template
 ```
 
-### 2. Create Your Work Branch
+Ensure the working tree is clean before continuing.
+
+## 2. Create Your Work Branch
 
 Create a branch using the standard naming convention:
 
 ```bash
-# Replace <username|org> with your GitHub username or organization name
 git checkout -b proposal/<username|org>
 ```
 
-### 3. Choose and Use the Appropriate Template
+Replace `<username|org>` with your GitHub username or organization name.
 
-Select the correct template based on proposal type:
+## 3. Choose the Scope
 
-#### For RFCs (Requests for Comments)
+All specification documents belong to a scope under `spec/`.
 
-Use when proposing new specifications, features, or significant changes:
+The standard structure is:
 
-- Template file: `templates/rfc.md`
-- Target location: `ai-spec/<scope>/rfcs/` (e.g., `ai-spec/agents/rfcs/`)
-- Filename format: `0001-descriptive-name.md` (increment the number)
-
-#### For Decisions
-
-Use when documenting agreed-upon choices or resolutions:
-
-- Template file: `templates/decisions.md`
-- Target location: `ai-spec/<scope>/decisions/` (e.g., `ai-spec/agents/decisions/`)
-- Filename format: `0001-descriptive-name.md` (increment the number)
-
-### 4. Copy and Edit the Template
-
-Copy the template to the appropriate location within the scope structure:
-
-```bash
-# For an RFC in agents scope
-# (e.g., `ai-spec/skills/rfcs/0001-my-proposal.md`)
-cp templates/rfc.md ai-spec/skills/rfcs/<rfc-number>-<rfc-name>.md
-
-# For a Decision in agents scope
-# (e.g., `ai-spec/mcp/decisions/0001-my-decision.md`)
-cp templates/decisions.md ai-spec/mcp/decisions/<decision-number>-<decision-name>.md
+```text
+spec/
+└── <scope>/
+    ├── <scope>.md
+    ├── rfcs/
+    └── decisions/
 ```
 
-Then edit the file:
+If the appropriate scope already exists, use it.
 
-- Replace all placeholder text (like `<Specific Proposal Title>`)
-- Fill in each section completely
-- Remove instructions/comments that were in the template
-- Keep the section headers and structure intact
+Otherwise, create a new scope following this structure.
 
-### 5. Commit Your Changes
+## 4. Create or Update the Scope Index
+
+Every scope must have an index named after the scope:
+
+```text
+spec/<scope>/<scope>.md
+```
+
+For a new scope, initialize the index from the template:
+
+```bash
+cp spec/template/template.md spec/<scope>/<scope>.md
+```
+
+If the scope already exists, update its existing index. Do not replace it.
+
+Keep the index concise and update it whenever its RFCs or global decisions change.
+
+## 5. Determine the Proposal Number
+
+RFC and Decision numbers are scoped independently.
+
+For an RFC, find the highest existing RFC number in the scope:
+
+```bash
+ls spec/<scope>/rfcs/
+```
+
+For a Decision, find the highest existing Decision number:
+
+```bash
+ls spec/<scope>/decisions/
+```
+
+Use the next available four-digit number. If no documents exist, start with `0001`.
+
+## 6. Create the Proposal
+
+Use the corresponding template:
+
+```bash
+# RFC
+cp spec/template/rfcs/rfc.md spec/<scope>/rfcs/<number>-<descriptive-name>.md
+
+# Decision
+cp spec/template/decisions/decisions.md spec/<scope>/decisions/<number>-<descriptive-name>.md
+```
+
+Use the correct scope and proposal number.
+
+When creating a new RFC or global decision, update the scope index with the corresponding entry.
+
+## 7. Update References
+
+When adding or modifying specification documents:
+
+- Keep the scope index up to date.
+- Place RFCs under the appropriate status section.
+- Update an RFC's position in the index when its status changes.
+- Keep links and descriptions accurate.
+- Add relevant relationships between RFCs, decisions, discussions, and other specification resources.
+
+Do not duplicate detailed proposal content in the scope index.
+
+## 8. Edit and Validate
+
+Use the template as the starting point and adapt it to the proposal.
+
+Before submitting:
+
+- Replace all placeholders.
+- Remove template instructions that are not part of the final document.
+- Keep the content focused on the proposal.
+- Add or remove sections when appropriate.
+- Verify links and references.
+- Ensure the document is located under the correct scope.
+- Ensure the scope index is up to date.
+
+Templates provide recommended structures and may be adapted when necessary.
+
+## 9. Commit Your Changes
 
 Make regular commits as you work:
 
 ```bash
-# Commit with a descriptive message using the scope (e.g., agents, skills, mcp, hooks, etc.)
 git commit -m "feat(agents): add proposal for agent file structure"
-# OR
-# git commit -m "feat(skills): document decision on visibility enhancement"
-# OR
-# git commit -m "feat(mcp): propose new MCP server guidelines"
 ```
 
-You can make multiple commits as you refine your proposal:
+Use an appropriate scope for the area being changed.
 
-```bash
-git commit -am "fix(agents): clarify goal statement in section 3"
-git commit -am "feat(skills): add reference-level explanation"
-```
+## 10. Push and Open the Pull Request
 
-### 6. Prepare for Pull Request
-
-Before opening your PR:
-
-- Ensure your proposal is complete and readable
-- Check that all template placeholders have been replaced
-- Verify links and references are correct
-
-### 8. Open the Pull Request
-
-When ready, push your branch and open a PR:
+Push the proposal branch:
 
 ```bash
 git push origin proposal/<username|org>
 ```
 
-Then open a pull request targeting the `proposal/template` branch (not main or other branches).
+Open a pull request targeting the `proposal/template` branch.
 
-## Finding the Next Template Number
+Link the relevant discussion in the pull request so the proposal can be reviewed alongside the community discussion.
 
-To determine the next number for your RFC or Decision within a scope:
+## Repository Templates
 
-```bash
-# For RFCs in a specific scope
-ls ai-spec/<scope>/rfcs/ | sort | tail -1
+The proposal templates are located under:
 
-# For Decisions in a specific scope
-ls ai-spec/<scope>/decisions/ | sort | tail -1
+```text
+spec/template/
+├── template.md          # Scope index
+├── rfcs/
+│   └── rfc.md           # RFC
+└── decisions/
+    └── decisions.md     # Decision
 ```
 
-Increment the number from the latest file found in that scope's directory.
-
-## Notes
-
-The broader process (opening discussions, linking PRs, community feedback) is handled separately as described in CONTRIBUTING.md.
+The broader contribution process, including discussions, community feedback, and proposal review, is described in `CONTRIBUTING.md`.
