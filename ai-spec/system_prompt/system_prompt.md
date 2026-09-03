@@ -1,3 +1,0 @@
-# System Prom
-
-Implementation pending.

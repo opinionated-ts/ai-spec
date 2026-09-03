@@ -1,3 +1,0 @@
-# Setting files
-
-Implementation pending.

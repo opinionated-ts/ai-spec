@@ -1,3 +1,0 @@
-# Agents
-
-Implementation pending.
