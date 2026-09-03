@@ -1,39 +1,55 @@
 # What is this repository?
 
-AI coding assistants and tool platforms (agents, hooks, MCP servers, plugins, skills) each define their own conventions, formats, and capabilities. This fragmentation makes it hard to build tools that work consistently across providers.
+AI coding assistants and tool platforms define their own conventions, formats, and capabilities for concepts such as agents, hooks, MCP, plugins, and skills. This fragmentation makes it difficult to build tools and workflows that work consistently across different providers and environments.
 
-`ai-spec` is an attempt to define an open, opinionated specification for AI-assisted development — a common configuration that AI providers and environments can align to.
+`ai-spec` is an attempt to define an open, opinionated specification for AI-assisted development — a common set of conventions that providers, tools, and environments can align to.
 
 ## Goals
 
-- Provide a clear, community-driven specification covering how agents, hooks, MCP integrations, plugins, and skills should be defined and behave.
-- Reduce inconsistencies between AI coding assistants and tooling platforms.
-- Aim to become an open standard: if adopted, tools built against this spec would work across any compliant provider, instead of being tied to a single vendor.
+* Provide a clear, community-driven specification for common concepts and behaviors in AI-assisted development.
+* Reduce unnecessary inconsistencies between AI coding assistants and tooling platforms.
+* Establish conventions that can be implemented across different providers and environments.
+* Aim to become an open standard: tools built against the specification should be usable across any compliant ecosystem rather than being tied to a single vendor.
 
 ## Non-goals
 
-- This project does not aim to build a unified abstraction layer or wrapper across all existing platforms.
+* Build a unified abstraction layer or wrapper across existing AI platforms.
+* Replace existing providers, tools, or development environments.
+* Require providers to adopt a specific implementation.
 
 ## Current status
 
-This specification is under active discussion and is **not yet stable**. Expect breaking changes to proposals as the community refines scope and details.
+This specification is under active discussion and is **not yet stable**. Proposals and definitions may change significantly as the community refines the specification.
 
-See [discussions](https://github.com/opinionated-ts/ai-spec/discussions) for ongoing conversations and open questions.
+See [Discussions](https://github.com/opinionated-ts/ai-spec/discussions) for ongoing conversations, proposals, and open questions.
 
-## Scope
+## Specification
 
-The specification aims to cover:
+The specification is organized into independent scopes covering different areas of AI-assisted development.
 
-- **Agents**: how autonomous AI agents are defined, invoked, and scoped
-- **Hooks**: integration points between AI and development workflows
-- **MCP**: conventions on top of the Model Context Protocol
-- **Plugins**: how IDE/tool extensions should expose capabilities to AI
-- **Skills**: a common format for reusable AI agent capabilities
-- **Environment**: recommended baseline configuration for AI-enhanced development
+Scopes are intentionally open-ended and may evolve as new areas emerge.
+
+Each scope can contain:
+
+* An overview and navigation document.
+* RFCs proposing or defining changes to the specification.
+* Decisions documenting broader decisions relevant to the scope.
+
+```text
+spec/
+└── <scope>/
+    ├── <scope>.md
+    ├── rfcs/
+    └── decisions/
+```
+
+Potential areas include agents, hooks, MCP, plugins, skills, system prompts, configuration, and other concepts that emerge through the specification process.
 
 ## Contributing
 
-This spec is meant to be built by the community. Contributions, proposals, and critiques are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose changes or open a discussion.
+This specification is built by the community through discussion, proposals, review, and iteration.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) to learn how to participate and propose changes.
 
 ## License
 
