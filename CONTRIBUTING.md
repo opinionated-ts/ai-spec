@@ -1,34 +1,73 @@
 # Contributing to ai-spec
 
-Thanks for your interest in contributing! This project is community-driven, and the specification improves through concrete proposals and active review, not just opinions in the abstract.
+Thanks for your interest in contributing!
 
-## How to propose changes to the specification
+ai-spec is community-driven. The specification evolves through concrete proposals, discussion, review, and iteration.
 
-1. **Open a discussion** in [discussion#1](https://github.com/opinionated-ts/ai-spec/discussions/1) to share your idea and get early feedback. This helps the community understand the problem and context before seeing the code.
+## How to propose changes
 
-2. **Fork the repository** (if you haven't already) and **create a branch** named `proposal/<your-username-or-org>` (replace `<your-username-or-org>` with your GitHub username or organization) in your fork.
+### 1. Start a discussion
 
-3. **Open a PR** from that branch with the specification (or section of it) you want to propose. Be explicit about:
-    - What problem it solves or what inconsistency it addresses
-    - The exact structure/format you're proposing (Markdown, JSON Schema, TypeScript types, etc.)
-    - Examples showing how it would be used in practice
-    - Any trade-offs or alternatives you considered
+Before writing a proposal, open a discussion in [discussion#1](https://github.com/opinionated-ts/ai-spec/discussions/1) to introduce the idea and gather early feedback.
 
-4. **Link your PR in the discussion.** Comment on the discussion you opened in step 1 with a link to the PR, so the community can find it and discuss it alongside the rest.
+A discussion should provide enough context for others to understand the proposal:
 
-## How to help without opening a proposal
+* What problem are you trying to solve?
+* Why does it matter for AI-assisted development?
+* How do existing providers or ecosystems approach it?
+* What direction are you considering?
 
-You don't need a proposal of your own to contribute meaningfully:
+Early discussion helps identify concerns, alternatives, and related work before the proposal is written.
 
-- **Review open PRs.** Read through existing proposals, leave comments, point out edge cases, or suggest improvements.
-- **Vote and give feedback on the discussion.** Reacting to and commenting on other people's proposals linked in the discussion helps surface which directions the community actually wants — this is just as valuable as writing a new proposal.
-- **Flag inconsistencies.** If you notice two proposals conflicting with each other, or with an already-merged part of the spec, raise it in the relevant PR or discussion thread.
+### 2. Develop the proposal
+
+Once the idea has enough context, develop the proposal following the repository's proposal workflow.
+
+See [proposal.instructions.md](./proposal.instructions.md) for the local workflow and document structure.
+
+### 3. Open a pull request
+
+Open a pull request containing the specification changes you want to propose.
+
+Keep proposals focused. Smaller, well-defined changes are easier to understand, review, and evolve.
+
+### 4. Continue the discussion
+
+Link your pull request in the discussion where the proposal was introduced.
+
+The discussion and pull request should provide a shared place for the community to review the proposal, question its assumptions, and suggest alternatives.
+
+## How proposals evolve
+
+Proposals are expected to change during review.
+
+Feedback may result in:
+
+* changes to the proposed design;
+* additional research or prior art;
+* changes in scope;
+* new alternatives being considered;
+* related decisions or proposals;
+* rejection or replacement of the original proposal.
+
+A proposal is not expected to be perfect when first submitted. The goal is to make the reasoning and trade-offs clear enough for the community to improve it.
+
+## How to contribute without opening a proposal
+
+You don't need a proposal of your own to contribute meaningfully.
+
+* **Review open PRs.** Read existing proposals, identify edge cases, and suggest improvements.
+* **Participate in discussions.** Ask questions, challenge assumptions, and provide relevant experience or prior art.
+* **Vote and give feedback.** Reactions and comments help surface which directions the community finds useful.
+* **Flag inconsistencies.** If proposals conflict with each other or with an accepted part of the specification, raise the issue in the relevant PR or discussion.
 
 ## Guidelines for proposals
 
-- Keep proposals scoped — smaller, focused PRs are easier to review and discuss than one giant spec dump.
-- Back up design choices with reasoning, not just preference. "This is how tool X does it" is useful context, but explain *why* it should apply here.
-- Be open to disagreement. The goal is convergence, not winning an argument.
+* **Keep proposals focused.** Prefer smaller, well-defined changes over large specification dumps.
+* **Explain the reasoning.** Existing implementations are useful evidence, but explain why a particular approach should apply to the specification.
+* **Consider multiple ecosystems.** The specification is intended to work across different providers and development environments.
+* **Prefer evidence over preference.** Prior art, concrete use cases, and technical reasoning are more useful than personal preference alone.
+* **Be open to disagreement.** The goal is convergence around a useful specification, not winning an argument.
 
 ## License
 
